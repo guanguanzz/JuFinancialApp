@@ -23,7 +23,29 @@ export default new Router({
     {
       path: '/bottomBar',
       name: 'bottomBar',
-      component: () => import('@/views/BottomBar.vue')
+      component: () => import('@/views/BottomBar.vue'),
+      children:[
+        {
+          path: '/recommond',
+          name: 'recommond',
+          component: ()=>import('@/views/Recommond.vue') 
+        },
+        {
+          path: '/moneyManage',
+          name: 'moneyManage',
+          component: ()=>import('@/views/MoneyManage.vue')
+        },
+        {
+          path: '/invest',
+          name: 'invest',
+          component: ()=>import('@/views/Invest.vue')
+        },
+        {
+          path: '/mine',
+          name: 'mine',
+          component: ()=>import('@/views/Mine.vue')
+        }
+      ]
     },
 
   ]

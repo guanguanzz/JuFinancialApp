@@ -2,10 +2,21 @@ import Vue from 'vue'
 import App from './App.vue'
 import router from './router'
 import store from './store'
-
+//swiper插件
 import VueAwesomeSwiper from 'vue-awesome-swiper'
 import 'swiper/dist/css/swiper.css'
-Vue.use(VueAwesomeSwiper, /* { default global options } */)
+Vue.use(VueAwesomeSwiper, /* { default global options } */ )
+
+import '@/assets/scss/iconFont/iconfont.css' //阿里云图标
+
+//vant-ui按需引用
+import {
+  Tabbar,
+  TabbarItem,
+  Tab,
+  Tabs
+} from 'vant';
+Vue.use(Tabbar).use(TabbarItem).use(Tab).use(Tabs);
 
 Vue.config.productionTip = false
 
