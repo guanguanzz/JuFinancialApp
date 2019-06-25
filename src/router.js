@@ -33,7 +33,19 @@ export default new Router({
         {
           path: '/moneyManage',
           name: 'moneyManage',
-          component: ()=>import('@/views/MoneyManage.vue')
+          component: ()=>import('@/views/MoneyManage.vue'),
+          children:[
+            {
+              path: '/productLists',
+              name: 'productLists',
+              component: ()=>import('@/components/ProductLists.vue'),
+            },
+            {
+              path: '/productContinue',
+              name: 'productContinue',
+              component: ()=>import('@/components/ProductContinue.vue'),
+            },
+          ]
         },
         {
           path: '/invest',
